@@ -18,13 +18,12 @@ author_id = 227840
 # get_series_author = requests.get('https://www.goodreads.com/series/list/' + author_id + '.xml?' + api_key)
 #
 # #get review by title and (optional) author
-title = 'A+GAME+OF+THRONES+MARTIN'
-# author = 'George R. R. Martin'
+title = 'A+GAME+OF+THRONES'
+author = 'George+Martin'
 # get_reviews = requests.get('https://www.goodreads.com/book/' + title + '.FORMAT')
 
 #search by title, author, or isbn
-
-get_books = requests.get('https://www.goodreads.com/search.xml?' + api_key + '&q=' + title)
+get_books = requests.get('https://www.goodreads.com/search.xml?' + api_key + '&q=' + title + '+ '+ author)
 root = ET.fromstring(get_books.content)
 books = []
 
