@@ -1,0 +1,11 @@
+
+
+<h1>{{ search.search_text }}</h1>
+
+<ul>
+{% for choice in search.choice_set.all %}
+    <li>{{ choice.choice_text }} -- {{ choice.votes }} search{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'greatreads:detail' search.id %}">Search again?</a>

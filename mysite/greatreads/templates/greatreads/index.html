@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'greatreads/style.css' %}" />
+        <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+    </head>
+<body>
+        <header>
+            <h1>Welcome to Greatreads!<h1>
+            <h2>Search the Goodreads database here</h2>
+        </header>
+
+        {% if latest_search_list %}
+            <ul>
+            {% for search in latest_search_list %}
+                <li><a href="{% url 'greatreads:detail' search.id %}">
+                    {{ search.search_text }}</a></li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No searches are available.</p>
+        {% endif %}
+    </body>
+</html>
