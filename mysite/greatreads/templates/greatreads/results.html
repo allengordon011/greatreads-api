@@ -1,4 +1,7 @@
-
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'greatreads/style.css' %}" />
+<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
 
 <h1>{{ search.search_text }}</h1>
 
@@ -8,4 +11,4 @@
 {% endfor %}
 </ul>
 
-<a href="{% url 'greatreads:search' search.id %}">Search again?</a>
+<a href="{% url 'greatreads:searchpage' search.id %}">Search again?</a>

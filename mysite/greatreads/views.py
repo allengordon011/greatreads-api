@@ -25,13 +25,13 @@ class ResultsView(generic.DetailView):
     model = Search
     template_name = 'greatreads/results.html'
 
-def submit(request, search_id):
+def searchpage(request, search_id):
     search = get_object_or_404(Search, pk=search_id)
     try:
         selected_input = search.input_set.get(pk=request.POST['input'])
     except (KeyError, Input.DoesNotExist):
         # Redisplay the search voting form.
-        return render(request, 'greatreads/search.html', {
+        return render(request, 'greatreads/searchpage.html', {
             'search': search,
             'error_message': "You didn't submit anything.",
         })
