@@ -19,10 +19,10 @@
                 <li>{{ search.search_text }}
                     <form action="{% url 'greatreads:results' search.id %}" method="post">
                     {% csrf_token %}
-                    {% for input in search.input_set.all %}
+                    <!-- {% for input in search.input_set.all %}
                         <input type="text" placeholder="enter text" name="input" id="input{{ forloop.counter }}" value="{{ input.id }}" />
                         <br /><br />
-                    {% endfor %}
+                    {% endfor %} -->
                     <input type="text" />
                     <!-- <button type="submit">Submit</button> -->
                     </form>

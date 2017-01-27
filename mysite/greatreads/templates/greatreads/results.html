@@ -3,12 +3,8 @@
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> -->
 
-<h1>{{ search.search_text }}</h1>
+<h1>Search results</h1>
 
-<ul>
-{% for choice in search.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} search{{ choice.votes|pluralize }}</li>
-{% endfor %}
-</ul>
 
-<a href="{% url 'greatreads:searchpage' search.id %}">Search again?</a>
+
+<a href="{% url 'greatreads' search.id %}">Search again?</a>
