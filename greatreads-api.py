@@ -32,4 +32,4 @@ for title in root[1].iter('title'):
 for url in root[1].iter('image_url'):
     book_cover = url.text
 
-print(books[:2])
+print(books[:5])
