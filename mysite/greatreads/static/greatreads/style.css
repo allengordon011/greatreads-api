@@ -1,0 +1,25 @@
+* {
+    font-family: 'Lora', serif;
+    margin:auto;
+}
+
+body {
+  padding-left: 25px;
+  padding-top: 25px;
+  background-color: lightgrey;
+  text-align: center;
+}
+
+/*div.background {
+    background: url("images/background.jpg") no-repeat right bottom;
+    background-size: cover;
+    opacity: 0.3;
+}*/
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 75px;
+    width: 75%;
+}
